@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>My Map 1 </title>
+	<link href="https://fonts.googleapis.com/css?family=K2D|Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="">
+
+	</head>
+	<body>
+		<h1> Where I've attended school in Florida</h1>
+<div id="mapid">
+</div>
+
+
+		<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+		<script>  let mymap= L.map('mapid').setView([28.008,-80.234], 6.64);
+
+
+
+
+		L.tileLayer('https://api.mapbox.com/styles/v1/brettpz/cjp0e04zj06152snpqplg3xl7/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYnJldHRweiIsImEiOiJjanAwZHR4ZDIzM21nM3BuaDczY2VrNnF3In0.kygleDWiwBqQag3Anh4_Vg', {
+		    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		    maxZoom: 18
+		}).addTo(mymap);
+
+		let marker1 = L.marker([26.641880, -80.265800]).addTo(mymap)
+			.bindPopup('New Horizons Elementary School, Grades K-3rd');
+		let marker2 = L.marker([26.680830, -80.285640]).addTo(mymap)
+			.bindPopup('Binks Forest Elementary School, Grades 4th-5th');
+		let marker3 = L.marker([26.623439, -80.232678]).addTo(mymap)
+			.bindPopup('Polo Park Middle School, Grades 6th-8th');
+		let marker4 = L.marker([26.650150, -80.265870]).addTo(mymap)
+			.bindPopup('Wellington High School, Grades 9th-12th');
+		let marker5 = L.marker([29.644890, -82.354500]).addTo(mymap)
+			.bindPopup('University of Florida, Freshman-Senior year of University');
+
+		</script>
+		<p> A map by Brett Pizzi. The map showcases where I've attended school from kindergarten through university.</p>
+	</body>
+	</html>
